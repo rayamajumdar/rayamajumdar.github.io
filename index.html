@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Raya Majumdar - Official Profile</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,52 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    img.img-responsive.profilepic {
+    border-radius: 50%;
+    box-shadow: 7px 7px 5px -2px #262626;
+}
 
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    height: 100vh;
+    background: #00000087;
+}
+
+  header .container {
+    padding-top: 130px;
+    padding-bottom: 0 !important;
+}
+ul.nav.navbar-nav.navbar-right {
+    width: 100%;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+    background: transparent;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink {
+    background: #000000;
+}
+</style>
 </head>
 
 <body id="page-top" class="index">
@@ -44,14 +89,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Raya Majumdar</a>
+                <a class="navbar-brand" href="#page-top"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <center>   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li class="page-scroll">
+                        <a href="#page-top">Home</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#portfolio">Portfolio</a>
@@ -64,26 +109,34 @@
                     </li>
                 </ul>
             </div>
+            </center>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
+
+   <header>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="https://videocdn.cdnpk.net/videos/b8611ed0-a00e-44ab-834c-0ecae5603443/horizontal/previews/clear/large.mp4?token=exp=1744793951~hmac=b2c9e7b0db6cb1262bccba12409baf600a6dc6378845328ab899a725610bdc72" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <img class="img-responsive profilepic" src="img/raya_majumdar_profile_pic.webp" alt="">
                     <div class="intro-text">
-                        <span class="name">Start Bootstrap</span>
+                        <span class="name">Raya Majumdar</span>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        <span class="skills">SEO - Digital Marketing - Webmaster</span>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
@@ -170,14 +223,14 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>I'm Raya Majumdar, an SEO, Website, and Digital Marketing Specialist with 3 years of experience crafting data-driven online strategies. Backed by an MBA in Marketing, I bring expertise in SEO, website optimization, domain management, content marketing, and analytics. I focus on boosting brand visibility, increasing organic traffic, and driving measurable results. </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>With hands-on experience in technical SEO, keyword research, UX enhancements, digital strategy, and end-to-end website management, I blend creativity with data to transform challenges into growth opportunities. Let's work together to make your brand more visible, discoverable, and impactful online.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
+                    <a href="https://rayamajumdar.github.io/doc/raya_majumdar-resume.pdf" target="_blank" class="btn btn-lg btn-outline">
+                        <i class="fa fa-external-link"></i>  View Resume
                     </a>
                 </div>
             </div>
@@ -246,31 +299,19 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                        <p>Barrackpore, Kolkata- 700123</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                             <li>
+                                <a href="https://in.linkedin.com/in/raya-majumdar" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>About Me</h3>
+                        <p>An SEO, Website, and Digital Marketing Specialist with 3 years of experience crafting data-driven online strategies.</p>
                     </div>
                 </div>
             </div>
@@ -279,7 +320,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        Copyright &copy;2025 Raya Majumdar, All rights reserved. Some logos belongs to third party.
                     </div>
                 </div>
             </div>
