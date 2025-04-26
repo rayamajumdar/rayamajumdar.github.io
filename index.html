@@ -76,6 +76,144 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink {
 .navbar-fixed-top {
     padding: 7px 0 !important;
 }
+
+/***Skills section style*/
+ .skills-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .skill-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .skill-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    
+    .skill-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .premium-badge {
+      background-color: #fef9c3;
+      color: #854d0e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 20px;
+    }
+    
+    .skill-content {
+      padding: 20px;
+    }
+    
+    .skill-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .skill-desc {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    
+    .skill-progress {
+      margin-top: 20px;
+    }
+    
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+    
+    .progress-text {
+      font-weight: 600;
+    }
+    
+    .progress-percentage {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .progress-bar {
+      height: 8px;
+      width: 100%;
+      background-color: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .progress-value {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--primary-light), var(--primary));
+    }
+    
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    /* Skills section ends*/
 </style>
 </head>
 
@@ -142,79 +280,214 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink {
 </header>
 
  <!-- Skills Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Skils</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
+    <section class="skills-section">
+    <div class="section-header">
+      <h2 class="section-title">Professional Expertise</h2>
+      <p class="section-subtitle">Advanced proficiency in industry-leading SEO and analytics platforms with enterprise-level access</p>
+    </div>
+    
+    <div class="skills-grid">
+      <!-- Google Analytics 4 -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e8f5e9;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2e7d32">
+              <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-12v8h2v-8h-2z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Premium</span>
         </div>
-    </section>
-
+        <div class="skill-content">
+          <h3 class="skill-name">Google Analytics 4</h3>
+          <p class="skill-desc">Advanced implementation, custom events tracking, and strategic analysis with full admin access.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">95%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Universal Analytics -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e8f5e9;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2e7d32">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H8v-8h4v8zm6 0h-4v-4h4v4zm0-6h-4V7h4v4z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Legacy Pro</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">Universal Analytics</h3>
+          <p class="skill-desc">Legacy system expertise, data migration, historical analysis, and custom reporting.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">98%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 98%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Google Search Console -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e3f2fd;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1565c0">
+              <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5 1.5-1.5-5-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Full Access</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">Google Search Console</h3>
+          <p class="skill-desc">Performance monitoring, technical SEO, indexing optimization, and search visibility analysis.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">96%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 96%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Google Tag Manager -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e8eaf6;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3949ab">
+              <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Advanced</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">Google Tag Manager</h3>
+          <p class="skill-desc">Complex tag implementation, custom triggers and variables, cross-domain tracking configuration.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">97%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 97%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SEMRush -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #ffebee;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#c62828">
+              <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Guru Plan</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">SEMRush</h3>
+          <p class="skill-desc">Competitive analysis, keyword research, position tracking, and content optimization strategy development.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">94%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 94%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AHREFs -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #fff3e0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ef6c00">
+              <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Advanced</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">AHREFs</h3>
+          <p class="skill-desc">Backlink analysis, site audits, content gap analysis, and competitor benchmarking.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">92%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MOS Pro -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e0f7fa;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0097a7">
+              <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Pro Edition</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">MOS Pro</h3>
+          <p class="skill-desc">On-page optimization, SERP feature analysis, content optimization for specific search intents.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SE Ranking -->
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon" style="background-color: #e8f5e9;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#388e3c">
+              <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
+            </svg>
+          </div>
+          <span class="premium-badge">Enterprise</span>
+        </div>
+        <div class="skill-content">
+          <h3 class="skill-name">SE Ranking</h3>
+          <p class="skill-desc">White-label reporting, competitor tracking, backlink monitoring, and automated rank tracking.</p>
+          <div class="skill-progress">
+            <div class="progress-label">
+              <span class="progress-text">Expertise</span>
+              <span class="progress-percentage">89%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-value" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
