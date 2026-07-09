@@ -51,6 +51,9 @@ window.addEventListener("scroll", setHeaderTone, { passive: true });
   });
 })();
 
+// Set current year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // Lazy load images below the fold
 document.querySelectorAll(".proof-grid img, .gsc-grid img, .ppc-proof img, .geo-section img, .ai-overview-section img").forEach((img) => {
   img.loading = "lazy";
