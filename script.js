@@ -92,6 +92,23 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Mobile nav toggle
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+
+navToggle.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", open);
+});
+
+// Close nav on link click
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
 // Set current year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
