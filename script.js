@@ -51,6 +51,47 @@ window.addEventListener("scroll", setHeaderTone, { passive: true });
   });
 })();
 
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("done");
+      entry.target.querySelectorAll(".reveal-children").forEach((el) => el.classList.add("done"));
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+// Nav active state
+const navLinks = document.querySelectorAll(".nav a[href^='#']");
+const sections = document.querySelectorAll("section[id]");
+
+const setActiveNav = () => {
+  let current = "";
+  sections.forEach((s) => {
+    if (window.scrollY >= s.offsetTop - 250) current = s.id;
+  });
+  navLinks.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+  });
+};
+
+window.addEventListener("scroll", setActiveNav, { passive: true });
+setActiveNav();
+
+// Back to top
+const backToTop = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 500);
+}, { passive: true });
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // Set current year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -58,3 +99,52 @@ document.getElementById("year").textContent = new Date().getFullYear();
 document.querySelectorAll(".proof-grid img, .gsc-grid img, .ppc-proof img, .geo-section img, .ai-overview-section img").forEach((img) => {
   img.loading = "lazy";
 });
+
+// Count-up animation
+const parseNumInfo = (text) => {
+  const m = text.match(/[\d,]+\.?\d*/);
+  if (!m) return null;
+  const raw = m[0].replace(/,/g, "");
+  const num = parseFloat(raw);
+  const prefix = text.slice(0, m.index);
+  const suffix = text.slice(m.index + m[0].length);
+  const decimals = raw.includes(".") ? raw.split(".")[1].length : 0;
+  const hasCommas = m[0].includes(",");
+  return { num, prefix, suffix, decimals, hasCommas };
+};
+
+const fmtNum = (val, info) => {
+  let n = info.decimals > 0 ? val.toFixed(info.decimals) : Math.round(val).toString();
+  if (info.hasCommas) {
+    const parts = n.split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    n = parts.join(".");
+  }
+  return info.prefix + n + info.suffix;
+};
+
+const countUp = (el, start, end, dur) => {
+  const info = parseNumInfo(el.textContent);
+  if (!info) return;
+  const t0 = performance.now();
+  const tick = (now) => {
+    const p = Math.min((now - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmtNum(start + (end - start) * eased, info);
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const info = parseNumInfo(el.textContent);
+      if (info) countUp(el, 0, info.num, 1200);
+      countObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll(".metrics span, .gsc-stats span, .ppc-metrics span").forEach((el) => countObserver.observe(el));
